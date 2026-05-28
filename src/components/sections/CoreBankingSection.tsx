@@ -14,8 +14,7 @@ export default function CoreBankingSection() {
       sx={{
         background: colors.bgDark,
         position: "relative",
-        overflowX: "clip",
-        overflowY: "visible",
+        overflow: "hidden",
         height: { xs: "auto", md: "619px" },
       }}
     >

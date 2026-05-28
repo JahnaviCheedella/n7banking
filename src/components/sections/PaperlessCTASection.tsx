@@ -92,6 +92,7 @@ export default function PaperlessCTASection({ dark = true, variant = "card" }: P
         sx={{
           background: colors.bgDark,
           position: "relative",
+          overflow: "hidden",
           width: "100%",
           height: { xs: "auto", md: "316px" },
           display: "flex",
@@ -195,6 +196,7 @@ export default function PaperlessCTASection({ dark = true, variant = "card" }: P
       sx={{
         ...(dark && { background: colors.bgDark }),
         position: "relative",
+        overflow: "hidden",
         ...(dark && {
           height: { xs: "auto", md: "681px" },
           minHeight: { xs: "520px", md: "681px" },
