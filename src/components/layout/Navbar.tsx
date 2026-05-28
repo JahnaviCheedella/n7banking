@@ -18,7 +18,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { useState } from "react";
 import { fontFamily } from "@/theme/typography";
 import { navLinks } from "@/constants/content";
-
+ 
 const navItemSx = {
   fontFamily: fontFamily.mono,
   fontWeight: 400,
@@ -28,12 +28,12 @@ const navItemSx = {
   textTransform: "uppercase" as const,
   color: "#E9F4F9",
 };
-
+ 
 export default function Navbar() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [drawerOpen, setDrawerOpen] = useState(false);
-
+ 
   return (
     <>
       <Box
@@ -44,7 +44,7 @@ export default function Navbar() {
           left: "50%",
           transform: "translateX(-50%)",
           width: { xs: "calc(100% - 32px)", md: "716.46px" },
-          zIndex: 1300,
+          zIndex: 100,
         }}
       >
         <Box
@@ -75,7 +75,7 @@ export default function Navbar() {
           >
             N7
           </Typography>
-
+ 
           {!isMobile && (
             <Box
               sx={{
@@ -111,7 +111,7 @@ export default function Navbar() {
                   </Button>
                 ))}
               </Box>
-
+ 
               <Button
                 variant="outlined"
                 href="#demo"
@@ -134,7 +134,7 @@ export default function Navbar() {
               </Button>
             </Box>
           )}
-
+ 
           {isMobile && (
             <Box sx={{ ml: "auto" }}>
               <IconButton size="small" onClick={() => setDrawerOpen(true)} sx={{ color: "#E9F4F9" }}>
@@ -144,14 +144,24 @@ export default function Navbar() {
           )}
         </Box>
       </Box>
-
+ 
       <Drawer
         anchor="right"
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
-        slotProps={{ paper: { sx: { width: 280, background: "rgba(47,47,47,0.97)" } } }}
+        sx={{ zIndex: 1400 }}
+        slotProps={{
+          paper: {
+            sx: {
+              width: 280,
+              background: "rgba(20,28,32,0.97)",
+              backdropFilter: "blur(20px)",
+              WebkitBackdropFilter: "blur(20px)",
+            },
+          },
+        }}
       >
-        <Box sx={{ display: "flex", justifyContent: "flex-end", p: 2 }}>
+        <Box sx={{ display: "flex", justifyContent: "flex-end", px: 2, pt: 2, pb: 1 }}>
           <IconButton onClick={() => setDrawerOpen(false)} sx={{ color: "#E9F4F9" }}>
             <CloseIcon />
           </IconButton>
