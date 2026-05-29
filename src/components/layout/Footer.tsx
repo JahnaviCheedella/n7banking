@@ -36,7 +36,12 @@ function FooterLink({ label, href = "#" }: { label: string; href?: string }) {
 
       <Box
         component="span"
-        sx={{ display: "inline-flex", alignItems: "center", width: "13.5px", height: "14.5px" }}
+        sx={{
+          display: "inline-flex",
+          alignItems: "center",
+          width: "13.5px",
+          height: "14.5px",
+        }}
       >
         <svg width="14" height="15" viewBox="0 0 14 15" fill="none">
           <path
@@ -54,7 +59,14 @@ function FooterLink({ label, href = "#" }: { label: string; href?: string }) {
 
 function AddressBlock({ heading, text }: { heading: string; text: string }) {
   return (
-    <Box sx={{ display: "flex", flexDirection: "column", gap: "16px", width: "100%" }}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "16px",
+        width: "100%",
+      }}
+    >
       <Typography
         sx={{
           fontFamily: fontFamily.primary,
@@ -110,9 +122,12 @@ function MenuBlock({ heading, links }: { heading: string; links: string[] }) {
 }
 
 export default function Footer() {
-  const londonAddress = "Linktia Infosystems Ltd – CB7,\n26 Main Road Sundridge,TN14 6EP, England, United Kingdom.";
-  const dubaiAddress = "Linktia Infosystems Ltd – CB7,Jumeirah Business, Center 5 Cluster W, Jumeirah Lakes Towers, Dubai, United Arab Emirates";
-  const puneAddress = "Linktia Infosystems Ltd – CB7,Nirmal, Anand Nagar, Suncity Road, Pune, Maharashtra, 411041, India";
+  const londonAddress =
+    "Linktia Infosystems Ltd – CB7,\n26 Main Road Sundridge,TN14 6EP, England, United Kingdom.";
+  const dubaiAddress =
+    "Linktia Infosystems Ltd – CB7,Jumeirah Business, Center 5 Cluster W, Jumeirah Lakes Towers, Dubai, United Arab Emirates";
+  const puneAddress =
+    "Linktia Infosystems Ltd – CB7,Nirmal, Anand Nagar, Suncity Road, Pune, Maharashtra, 411041, India";
 
   const solutionsLinks = [
     "Core Banking CB7",
@@ -143,7 +158,7 @@ export default function Footer() {
       sx={{
         background: colors.bgDark,
         position: "relative",
-        overflow: "hidden",
+        overflow: "clip",
         width: "100%",
         pt: { xs: 8, md: 0 },
         pb: { xs: 8, md: 0 },
@@ -218,28 +233,47 @@ export default function Footer() {
             position: { xs: "relative", md: "absolute" },
             top: { md: "130px" },
             left: { md: "543.68px" },
-            width: { xs: "100%", md: "816.3px" },
+            right: { md: "80px" },
+            width: { xs: "100%", md: "auto" },
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
             justifyContent: "space-between",
             gap: { xs: 6, md: 0 },
           }}
         >
-          <Box sx={{ display: "flex", flexDirection: "column", width: { xs: "100%", md: "268.5px" } }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              width: { xs: "100%", md: "268.5px" },
+            }}
+          >
             <Box sx={{ height: { md: "228px" }, mb: { xs: 4, md: 0 } }}>
               <AddressBlock heading="London" text={londonAddress} />
             </Box>
             <MenuBlock heading="Solutions" links={solutionsLinks} />
           </Box>
 
-          <Box sx={{ display: "flex", flexDirection: "column", width: { xs: "100%", md: "268.5px" } }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              width: { xs: "100%", md: "268.5px" },
+            }}
+          >
             <Box sx={{ height: { md: "228px" }, mb: { xs: 4, md: 0 } }}>
               <AddressBlock heading="Dubai" text={dubaiAddress} />
             </Box>
             <MenuBlock heading="N7 Banking" links={n7BankingLinks} />
           </Box>
 
-          <Box sx={{ display: "flex", flexDirection: "column", width: { xs: "100%", md: "211.3px" } }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              width: { xs: "100%", md: "211.3px" },
+            }}
+          >
             <Box sx={{ height: { md: "228px" }, mb: { xs: 4, md: 0 } }}>
               <AddressBlock heading="Pune" text={puneAddress} />
             </Box>
@@ -252,7 +286,8 @@ export default function Footer() {
             position: { xs: "relative", md: "absolute" },
             top: { md: "718.96px" },
             left: { md: "543.68px" },
-            width: { xs: "100%", md: "779.43px" },
+            right: { md: "80px" },
+            width: { xs: "100%", md: "auto" },
             height: { md: "36px" },
             fontFamily: fontFamily.primary,
             fontSize: "14px",
@@ -265,7 +300,9 @@ export default function Footer() {
             textAlign: { xs: "center", md: "left" },
           }}
         >
-          Copyright © 2022 by Linktia Infosystems Limited — [CB7 and N7 as Commercial Brand] — [Registered under the Companies Act 2006 in England and Wales | Number of Incorporation 13100992]
+          Copyright © 2022 by Linktia Infosystems Limited — [CB7 and N7 as
+          Commercial Brand] — [Registered under the Companies Act 2006 in
+          England and Wales | Number of Incorporation 13100992]
         </Typography>
       </Box>
     </Box>
