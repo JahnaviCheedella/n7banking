@@ -127,7 +127,7 @@ function FeaturedCard({ article }: { article: typeof articles[0] }) {
         background: CARD_BG,
         borderRadius: "18px",
         position: "relative",
-        width: { xs: "100%", md: "670px" },
+        width: "100%",
         height: { xs: "auto", md: "318px" },
         overflow: "hidden",
       }}

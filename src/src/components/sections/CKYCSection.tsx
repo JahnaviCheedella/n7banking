@@ -43,7 +43,7 @@ export default function CKYCSection() {
         sx={{
           position: { xs: "relative", md: "absolute" },
           top: { md: "168.68px" },
-          left: { md: "770px" },
+          right: { md: "80px" },
           width: { xs: "100%", md: "590px" },
           display: "flex",
           flexDirection: "column",

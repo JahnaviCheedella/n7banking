@@ -82,11 +82,11 @@ export default function SolutionsSection() {
         <Box
           sx={{
             display: "grid",
-            gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr", md: "repeat(2, 269px)" },
+            gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr", md: "repeat(2, 1fr)" },
             columnGap: { xs: "24px", md: "76px" },
             rowGap: { xs: "40px", md: "52px" },
-            width: { md: "613.01px" },
-            flexShrink: 0,
+            flex: { md: "1 1 613.01px" },
+            maxWidth: { md: "613.01px" },
           }}
         >
           {solutionsContent.items.map((item) => (

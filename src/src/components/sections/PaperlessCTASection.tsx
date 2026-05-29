@@ -211,7 +211,7 @@ export default function PaperlessCTASection({ dark = true, variant = "card" }: P
           position: { xs: "relative", md: dark ? "absolute" : "relative" },
           ...(dark && { top: { md: "127px" }, left: { md: "81px" } }),
           ...(!dark && { mx: { xs: "16px", md: "81px" }, my: { xs: "40px", md: 0 } }),
-          width: { xs: "calc(100% - 32px)", md: dark ? "1279px" : "calc(100% - 162px)" },
+          width: { xs: "calc(100% - 32px)", md: "calc(100% - 162px)" },
           height: { xs: "auto", md: "427px" },
           borderRadius: "27px",
           overflow: "hidden",

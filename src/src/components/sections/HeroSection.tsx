@@ -170,7 +170,7 @@ export default function HeroSection() {
           display: { xs: "none", md: "block" },
           position: "absolute",
           top: "255px",
-          left: "818px",
+          right: "60px",
           width: "562px",
           height: "301px",
           zIndex: 1,
